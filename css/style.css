@@ -1,0 +1,154 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #f2f3f4;
+	max-width: 980px;
+	margin: auto;
+	overflow-x: hidden;
+}
+
+header {
+	text-align: center;
+	position: relative;
+}
+
+header .title {
+	font-size: 50px;
+	margin-bottom: 30px;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate(-50%);
+	width: 100%;
+}
+
+video {
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.video-container {
+	height: 490px;
+    overflow: hidden;
+    position: relative;
+}
+
+.main-section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 490px;
+	padding: 0 20px 0;
+	background: #eee;
+}
+
+.main-section div {
+	width: 50%;
+	text-align: center;
+}
+
+.main-section p {
+	font-size: 20px;
+	flex: 0.8;
+    text-indent: 25px;
+    text-align: justify;
+}
+
+.main-section p:first-letter {
+	color: red;
+}
+
+form {
+	background: #fff;
+	border-radius: 5px;
+	padding: 25px 20px;
+	display: flex;
+	flex-direction: column;
+	max-width: 380px;
+	align-items: center;
+	margin-left: auto;
+}
+
+input, button {
+	max-width: 260px;
+    width: 100%;
+    margin-bottom: 25px;
+    height: 35px;
+    border-radius: 5px;
+    border: 2px solid #eee;
+    padding: 0 10px;
+    box-sizing: border-box;
+    -webkit-appearance: none
+}
+
+input::placeholder {
+	font-size: 16px;
+	color: #ccc;
+}
+
+input:focus {
+	border: 2px solid #0a31f4;
+	outline: none;
+}
+
+form div {
+	font-size: 22px;
+	margin-bottom: 20px;
+}
+
+form button {
+	background: #189c35;
+	border: 0;
+	font-size: 16px;
+	color: #fff;
+}
+
+footer {
+	text-align: center;
+	padding: 40px 20px;
+	background: #dae7ee;
+	font-size: 20px;
+}
+
+@media (max-width: 980px) {
+	.main-section, .video-container {
+		height: 50vw;
+	}
+}
+
+@media (max-width: 756px) {
+	.main-section {
+		flex-direction: column;
+		height: auto;
+	}
+
+	.main-section p {
+	    display: flex;
+	    align-items: center;
+	    height: 100vw;
+	}
+
+	.main-section div {
+		width: 100%;
+	}
+
+	form {
+		margin: auto;
+		margin-bottom: 20px;
+	}
+
+	.video-container, .main-section > div {
+		min-height: 100vw;
+	}
+
+	.main-section > div:last-child {
+		min-height: auto;
+		margin-bottom: 50px;
+	}
+}
