@@ -21,7 +21,9 @@ header .title {
 	position: absolute;
 	top: 10%;
 	left: 50%;
-	transform: translate(-50%);
+	-webkit-transform: translate(-50%);
+	    -ms-transform: translate(-50%);
+	        transform: translate(-50%);
 	width: 100%;
 }
 
@@ -29,7 +31,9 @@ video {
     height: 100%;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
     z-index: -1;
 }
 
@@ -40,9 +44,15 @@ video {
 }
 
 .main-section {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	height: 490px;
 	padding: 0 20px 0;
 	background: #eee;
@@ -55,7 +65,9 @@ video {
 
 .main-section p {
 	font-size: 20px;
-	flex: 0.8;
+	-webkit-box-flex: 0.8;
+	    -ms-flex: 0.8;
+	        flex: 0.8;
     text-indent: 25px;
     text-align: justify;
 }
@@ -68,10 +80,17 @@ form {
 	background: #fff;
 	border-radius: 5px;
 	padding: 25px 20px;
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	max-width: 380px;
-	align-items: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 	margin-left: auto;
 }
 
@@ -83,8 +102,24 @@ input, button {
     border-radius: 5px;
     border: 2px solid #eee;
     padding: 0 10px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     -webkit-appearance: none
+}
+
+input::-webkit-input-placeholder {
+	font-size: 16px;
+	color: #ccc;
+}
+
+input:-ms-input-placeholder {
+	font-size: 16px;
+	color: #ccc;
+}
+
+input::-ms-input-placeholder {
+	font-size: 16px;
+	color: #ccc;
 }
 
 input::placeholder {
@@ -124,13 +159,20 @@ footer {
 
 @media (max-width: 756px) {
 	.main-section {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		height: auto;
 	}
 
 	.main-section p {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
 	    display: flex;
-	    align-items: center;
+	    -webkit-box-align: center;
+	        -ms-flex-align: center;
+	            align-items: center;
 	    height: 100vw;
 	}
 
